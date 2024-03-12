@@ -215,6 +215,23 @@ String out = "[";
 					out = out + s.charAt(i);
 	}
 		return out;
+
+		#FIXCODE
+       public static String fixCasing(String s) {
+               StringBuilder out = new StringBuilder();
+               for (int i = 0; i < s.length(); i++) {
+              char currentChar = s.charAt(i);
+                        if (Character.isUpperCase(currentChar)) {
+                                out.append(Character.toLowerCase(currentChar));
+                       } else if (Character.isLowerCase(currentChar)) {
+                           out.append(Character.toUpperCase(currentChar));
+        } else {
+            out.append(currentChar);
+        }
+    }
+    return out.toString();
+}
+
 	}
 	
 	public static int howMany(boolean f, boolean t, boolean k, boolean z) {
